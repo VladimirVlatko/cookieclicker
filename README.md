@@ -1,1 +1,1 @@
-# cookieclicker
+This is Cookie Clicker Game (https://orteil.dashnet.org/cookieclicker/) playing bot. The bot uses Selenium and Python to click on the cookie as fast as possible. Every 5 seconds, the bot check the right-hand pane to see which upgrades are affordable and purchase the most expensive one. After 3 minutes have passed since starting the game, the bot stops and prints the "cookies per second" rate.
