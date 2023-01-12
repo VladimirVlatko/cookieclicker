@@ -1,11 +1,15 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 chrome_driver_path = "C:\Development\chromedriver.exe"
-driver = webdriver.Chrome(chrome_driver_path)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
 driver.get("https://orteil.dashnet.org/cookieclicker/")
+
+time.sleep(3)
 
 lang = driver.find_element(By.ID, "langSelect-EN")
 lang.click()
@@ -39,6 +43,7 @@ start = time.time()
 end_after = 180
 check_after = 5
 
+time.sleep(2)
 # Start the bot
 while True:
     delta = time.time() - start
